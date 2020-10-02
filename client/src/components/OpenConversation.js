@@ -1,5 +1,5 @@
 import React, { useState, useCallback } from 'react'
-import { Form, InputGroup, Button } from 'react-bootstrap'
+import { Form, InputGroup } from 'react-bootstrap'
 import { useConversations } from '../contexts/ConversationsProvider'
 
 export default function OpenConversation(){
@@ -24,7 +24,7 @@ export default function OpenConversation(){
 
 	return(
 		<div className="d-flex flex-column flex-grow-1">
-			<div className="flex-grow-1 overflow-auto">
+			<div className="flex-grow-1 overflow-auto converChat">
 			
 				<div className=" d-flex flex-column align-items-start justify-content-end px-3">
 					{selectedConversation.messages.map((message, index) => {
@@ -39,7 +39,7 @@ export default function OpenConversation(){
 							>
 							
 							<div 
-								className={`rounded px-2 py-1 ${message.fromMe ? 'bg-primary text-white' : 'border'}`}>
+								className={`colorChat rounded px-2 py-1 ${message.fromMe ? 'bg-primary text-white' : ''}`}>
 								{message.text}
 							</div>
 							
@@ -52,7 +52,7 @@ export default function OpenConversation(){
 				</div>
 			</div>
 
-			<Form onSubmit={handleSubmit}>
+			<Form onSubmit={handleSubmit} className="formSend">
 				<Form.Group className="m-2">
 					<InputGroup>
 						<Form.Control 
@@ -63,7 +63,7 @@ export default function OpenConversation(){
 							style={{ height: '75px', resize: 'none' }}
 						/>
 						<InputGroup.Append>
-							<Button type="submit">Send</Button>
+							<button type="submit" id="buton_send">➤</button>
 						</InputGroup.Append>
 					</InputGroup>
 				</Form.Group>

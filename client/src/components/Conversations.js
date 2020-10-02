@@ -6,7 +6,6 @@ export default function Conversations(){
 	const { conversations, selectConversationIndex } = useConversations()
 
 	return( 
-
 	<ListGroup variant="flush">
 		{conversations.map((conversation, index) => (
 					<ListGroup.Item 
@@ -14,6 +13,7 @@ export default function Conversations(){
 						action		   
 						onClick={() => selectConversationIndex(index)}
 						active={conversation.selected}
+						className="colorContact"
 					>
 						{conversation.recipients.map(r => r.name).join(', ')}
 					</ListGroup.Item>

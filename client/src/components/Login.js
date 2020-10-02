@@ -19,7 +19,7 @@ export default function Login({ onIdSubmit }){
 		<Container className="align-items-center d-flex" style={{ height: '100vh'}}>
 			<Form className="w-100" onSubmit={handleSubmit}>
 				<Form.Group>
-				<Form.Label>Ente Your id</Form.Label>
+				<Form.Label style={{color: 'white'}} >Ente Your id</Form.Label>
 				<Form.Control type="text" ref={idRef} required />
 				</Form.Group>
 				<Button type="submit" className="mr-2">Login</Button>

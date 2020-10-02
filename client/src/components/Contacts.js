@@ -8,7 +8,7 @@ const { contacts } = useContacts()
 	return( 
 	<ListGroup variant="flush">
 		{contacts.map(contact => (
-					<ListGroup.Item key={contact.id}>
+					<ListGroup.Item key={contact.id} className="colorContact">
 						{contact.name}
 					</ListGroup.Item>
 				))}

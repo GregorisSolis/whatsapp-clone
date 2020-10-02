@@ -1,0 +1,63 @@
+body{background: #2c333d;}
+.converChat{padding-top: 55px;}
+.colorChat, .colorContact{background: #495057; color: white}
+.panel_chat, .converChat, 
+.formSend, .corID
+{color: white; background: #2c333d}
+.panel_chat{width: 250px}
+
+.handlerConversal{display: none}
+
+#buton_send{
+	background: #007bff;
+	border: none;
+	color: white;
+	border-top-right-radius: 5px;
+	border-bottom-right-radius: 5px;
+	font-size: 2.5em
+}
+
+#buton_send:focus {
+     outline: none;
+}
+
+.btn_handler{
+	position: fixed;
+	left: 50%;
+	background: rgba(0,0,0, 0.3);
+	border-radius: 50%;
+	padding: 0px 8px;
+	border: none;
+	font-size: 2em;
+	color: white;
+	margin: 0px;
+	cursor: pointer;
+	margin-top: 5px
+}
+
+@media only screen and (max-width: 600px){
+
+	.panel_chat{
+	position: fixed;
+	height: 100vh;
+	z-index: 1;
+	box-shadow: 1px 1px 4px rgb(45,95,185);
+	width: 100%;
+	}
+
+	.btn_handler{
+	left: 45%;
+	}
+
+	.Btn_content{
+		position: fixed;
+		background: transparent;
+		border: none;
+		font-size: 2.5em;
+		color: white;
+		left: 2%;
+		top: -12px;
+		cursor: pointer;
+		display: flex;
+	}
+}
